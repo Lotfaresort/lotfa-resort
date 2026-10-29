@@ -326,7 +326,82 @@ S
 
             <p class="review-disclaimer">Guest reviews originally shared on Google.</p>
         </section>
+<!-- ===== BOOKING ENQUIRY FORM ===== -->
+<section id="enquiry">
+    <h2>Make an Enquiry</h2>
+    <p>Fill in your details below and we will connect with you on WhatsApp instantly.</p>
 
+    <form id="whatsapp-form" class="enquiry-form">
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="country">Country *</label>
+                <input type="text" id="country" placeholder="Which country are you from?" required>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date *</label>
+                <input type="date" id="startDate" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>No. of Days</label>
+                <div class="counter-wrapper">
+                    <button type="button" class="counter-btn" onclick="updateDays(-1)">-</button>
+                    <input type="number" id="days" value="2" min="1" readonly>
+                    <button type="button" class="counter-btn" onclick="updateDays(1)">+</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Guests *</label>
+                <div class="guests-wrapper">
+                    <select id="adults" required>
+                        <option value="1 Adult">1 Adult</option>
+                        <option value="2 Adults" selected>2 Adults</option>
+                        <option value="3 Adults">3 Adults</option>
+                        <option value="4 Adults">4 Adults</option>
+                    </select>
+                    <select id="children">
+                        <option value="0 Children" selected>0 Children</option>
+                        <option value="1 Child">1 Child</option>
+                        <option value="2 Children">2 Children</option>
+                        <option value="3 Children">3 Children</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" placeholder="example@mail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="+254 700 000000">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Comments</label>
+            <textarea id="comments" rows="4" placeholder="Please let us know a little bit more of what you wish for your stay..."></textarea>
+        </div>
+
+        <button type="submit" class="booking-button form-submit">SEND AN ENQUIRY →</button>
+    </form>
+</section>
         <section id="contact">
             <h2>Contact Lotfa Resort</h2>
             <p>We look forward to welcoming you to Lotfa Resort, Diani Beach.</p>
